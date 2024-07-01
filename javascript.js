@@ -30,7 +30,7 @@ function playRound() {
     const computerChoice = getComputerChoice();
 
     if (humanChoice == computerChoice) {
-        console.log(`It's a tie! You both picked ${humanChoice}, !`);
+        console.log(`It's a tie! You both picked ${humanChoice}!`);
         return;
     }
 
@@ -81,9 +81,13 @@ function playGame() {
     if (humanScore > computerScore) {
         console.log("Congratulations, you win!")
     }
-    else {
+    else if (humanScore < computerScore) {
         console.log("Sorry, you lost :(")
     }
+    else {
+        console.log("It's a draw!")
+    }
 }
+
 
 playGame();
