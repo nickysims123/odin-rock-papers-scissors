@@ -26,3 +26,14 @@ function getHumanChoice() {
 
 let humanScore = 0;
 let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice == computerChoice) {
+        console.log("It's a tie! You both picked ${humanChoice}, !");
+    }
+}
+
+const humanSelect = getHumanChoice();
+const computerSelect = getComputerChoice();
+
+playRound(humanSelect, computerSelect)
