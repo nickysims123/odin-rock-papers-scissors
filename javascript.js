@@ -25,14 +25,12 @@ function getHumanChoice() {
     return choice;
 }
 
-let humanScore = 0;
-let computerScore = 0;
+function playRound() {
+    const humanChoice = getHumanChoice();
+    const computerChoice = getComputerChoice();
 
-function playRound(humanChoice, computerChoice) {
-    console.log(humanChoice);
-    console.log(computerChoice);
     if (humanChoice == computerChoice) {
-        console.log("It's a tie! You both picked ${humanChoice}, !");
+        console.log(`It's a tie! You both picked ${humanChoice}, !`);
         return;
     }
 
@@ -69,10 +67,23 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-const humanSelect = getHumanChoice();
-const computerSelect = getComputerChoice();
+let humanScore = 0;
+let computerScore = 0;
 
-playRound(humanSelect, computerSelect)
+function playGame() {
+    console.log("Hello! Welcome to Rock Paper Scissors!")
 
-console.log(humanScore);
-console.log(computerScore);
+    for(let i = 0; i < 5; i++) {
+        playRound();
+    }
+
+    console.log(`The final score is ${humanScore} to ${computerScore}.`);
+    if (humanScore > computerScore) {
+        console.log("Congratulations, you win!")
+    }
+    else {
+        console.log("Sorry, you lost :(")
+    }
+}
+
+playGame();
