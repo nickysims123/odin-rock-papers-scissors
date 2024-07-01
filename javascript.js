@@ -18,12 +18,11 @@ function getComputerChoice() {
 function getHumanChoice() {
     let choice = prompt("Rock, Paper, or Scissors?");
     choice = choice.toUpperCase().slice(0,1) + choice.slice(1);
-    console.log(choice);
 
     if (choice != "Rock" && choice != "Paper" && choice != "Scissors") {
         choice = getHumanChoice();
     }
-
 }
 
-getHumanChoice();
+let humanScore = 0;
+let computerScore = 0;
