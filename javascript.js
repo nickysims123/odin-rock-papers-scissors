@@ -1,7 +1,16 @@
+// initial declaration of score variables
+let humanScore = 0;
+let computerScore = 0;
+
+
+// function to be used by getComputerChoice, chooses a
+// random selection from 1,2,3
 function getRandomInt(num) {
     return Math.floor(Math.random() * num);
 }
 
+// used in conjunction with getRandomInt, chooses a 
+// random selection from Rock, Paper, Scissors
 function getComputerChoice() {
     let num = getRandomInt(3);
     if (num == 0) {
@@ -15,6 +24,8 @@ function getComputerChoice() {
     }
 }
 
+// no longer feasible as we are not prompting user
+// response via a windows.prompt, but through buttons now
 function getHumanChoice() {
     let choice = prompt("Rock, Paper, or Scissors?");
     choice = choice.toUpperCase().slice(0,1) + choice.slice(1);
@@ -25,6 +36,9 @@ function getHumanChoice() {
     return choice;
 }
 
+// modified to account for user response via a series
+// of buttons, displays a new box when 5 rounds are up,
+// showing the winner
 function playRound() {
     const humanChoice = getHumanChoice();
     const computerChoice = getComputerChoice();
@@ -67,27 +81,8 @@ function playRound() {
     }
 }
 
-let humanScore = 0;
-let computerScore = 0;
-
 function playGame() {
     console.log("Hello! Welcome to Rock Paper Scissors!")
 
-    for(let i = 0; i < 5; i++) {
-        playRound();
-    }
-
-    console.log(`The final score is ${humanScore} to ${computerScore}.`);
-    if (humanScore > computerScore) {
-        console.log("Congratulations, you win!")
-    }
-    else if (humanScore < computerScore) {
-        console.log("Sorry, you lost :(")
-    }
-    else {
-        console.log("It's a draw!")
-    }
+    
 }
-
-
-playGame();

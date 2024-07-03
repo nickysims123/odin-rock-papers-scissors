@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    gap: 16px;
+    background-color: grey;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    background-color: #1f2937;
+    padding: 32px;
+    gap: 64px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 128px;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
