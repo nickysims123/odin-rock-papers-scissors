@@ -19,7 +19,7 @@ h1 {
     gap: 64px;
 }
 
-.buttons {
+.btts {
     display: flex;
     justify-content: center;
     gap: 64px;
@@ -36,4 +36,9 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.addendum {
+    text-align: center;
+    color: grey;
 }
