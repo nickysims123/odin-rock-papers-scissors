@@ -41,8 +41,8 @@ function getHumanChoice() {
 // showing the winner
 function playRound() {
     const computerChoice = getComputerChoice();
-    const doc = document.querySelector('div.btts');
-    doc.
+
+    const doc = document.querySelector(".btts")
 
     doc.addEventListener('click', (event) => {
         let target = event.target;
@@ -79,14 +79,15 @@ function playRound() {
     })
 }
 
-const doc = document.querySelector("#game");
-const msg = document.createElement('div');  msg.classList.add('addendum');
-msg.textContent = 'THE SCORE IS';
-
 
 function playGame() {
+    const humanScoreBoard = document.querySelector(".human");
+    const computerScoreBoard = document.querySelector(".bot");
+
     for (let i = 0; i < 5; i++) {
         playRound();
+        humanScoreBoard.textContent = humanScore;
+        computerScoreBoard.textContent = computerScore;
     }
     const doc = document.querySelector("#game");
 }
